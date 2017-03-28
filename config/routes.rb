@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
+  get 'experiments/page1'
+
+  get 'experiments/page2'
+
+  get 'experiments/page3'
+
+	resources :users
+	
   get 'pages/batman'
 
   get 'pages/superman'
+
+  post 'vote/batman'
+
+  post 'vote/superman'
 
   root 'pages#batman_vs_superman'
 
