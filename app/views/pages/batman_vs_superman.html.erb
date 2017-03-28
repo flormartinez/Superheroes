@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>"Batman_vs_Superman</title>
-</head>
-<body style=" margin: 50px">
-<img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-color: white;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%); margin: 50px" src="https://static-latercera-qa.s3.amazonaws.com/wp-content/uploads/sites/7/20150429/2108594.jpg">
-<img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-color: white;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%);cursor: zoom-in; margin: 50px,link" src="http://image.vanguardia.com.mx/sites/default/files/superman-3d-art.jpg" width="881" height="495">
-</body>
-</html>
+<div class="container">
+
+  <div class="superman">
+    <a class="superheroe" href="<%= pages_superman_url %>">Superman</a>
+    <%=image_tag("superman.jpg", class:"img-responsive")%>
+
+    <div class="form-superman">
+      <form action="<%= pages_save_votesuperman_path %>" method="POST">
+      <input placeholder="nombre" type="text" name="name" value="">
+      <input placeholder="email" type="email" name="email" value="">
+      <input type="submit" name="enviar" value="enviar">
+      </form>
+    </div>
+
+  </div>
+  <div class="batman">
+    <a class="superheroe" href="<%= pages_batman_url %>">Batman</a>
+    <%=image_tag("batman.jpg", class:"img-responsive")%>
+
+    <div class="form-batman">
+      <form action="<%= pages_save_votebatman_path %>" method="POST">
+      <input placeholder="nombre" type="text" name="name" value="">
+      <input placeholder="nombre" type="email" name="email" value="">
+      <input type="submit" name="enviar" value="enviar">
+      </form>
+    </div>
+
+  </div>
+
+  <%=flash[:notice]%>
+
+</div>
